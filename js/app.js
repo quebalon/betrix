@@ -1,7 +1,18 @@
+
+
 (function(){
     const listElements = document.querySelectorAll('.menu__item--show');
     const list = document.querySelector('.menu__links');
     const menu = document.querySelector('.menu__hamburguer');
+    const ham = document.querySelector('.ham');
+    const barras = document.querySelectorAll('.ham span');
+    
+
+
+    ham.addEventListener('click', () => {
+        barras.forEach(child => {child.classList.toggle('animado')});
+        ham.classList.toggle('girar');
+});
 
     const addClick = ()=>{
         listElements.forEach(element =>{
@@ -55,4 +66,6 @@
 
 
 })();
+
+
 
